@@ -9,3 +9,10 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+
+.env
+
+content/**/*
+!content/index.md
+!content/Unfiniished/**/*
+!content/Files/Public/**/*
