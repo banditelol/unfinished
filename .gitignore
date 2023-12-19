@@ -11,8 +11,3 @@ private/
 replit.nix
 
 .env
-
-content/**/*
-!content/index.md
-!content/Unfiniished/**/*
-!content/Files/Public/**/*
