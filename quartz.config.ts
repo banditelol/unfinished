@@ -5,12 +5,12 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "(un)Finished",
     enableSPA: true,
-    enablePopovers: false,
+    enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
     baseUrl: "unfinished.adityarp.com",
-    ignorePatterns: ["private", "templates", ".obsidian", "!(Files/Public)**/!(*.md)", "!(*.md)"],
+    ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
       typography: {
