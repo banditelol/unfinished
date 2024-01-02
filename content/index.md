@@ -16,4 +16,5 @@ Oh! and as I worked on this on my Obsidian using Quartz, expect some broken link
 Changes
 
 ## Notes
-[[1 101]]
+- [[1 101]]
+- [[2 Supervising Unsupervised Learning]]
