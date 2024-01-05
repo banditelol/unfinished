@@ -2,7 +2,6 @@
 publish: true
 tags:
   - unfinished
-title: Supervising Unsupervised Learning
 date: 2024-01-02
 created_date: 2024-01-02
 ---
@@ -13,6 +12,8 @@ Anyway.. I want to lay out several things related to [[Unsupervised Learning]] t
 ## The Goal of Model is not to (only) Predict
 
 Welp, it maybe obvious to some, but it took a while for me to realize this. Especially since I came from a more academic background, most of the work ended after I benchmarked the model against certain dataset. The rest is the analysis around that.
+
+%% change the following to be more inline with "What I called The rest is actually the real goal (well, not really, but quite close). Because what we want to do is not to only benchmark a model and then let it predict the result, but importantly analyzing and thinking about the domain our model resides is in.", will later change how the rest of paragraph will look like %%
 
 And there's where I'm wrong, especially when I'm creating (ML/DL) model inside a company to solve business problem. What I called **The rest** is **The Goal** (well, not really, but quite close). Since what we want to do is not to only benchmark a model and then let it predict the result. While **it is exactly what the model does**, but doesn't necessarily means that's the goal. We know that continuous improvement and monitoring is important, but personally I focused too much on the improvement of the model. So
 

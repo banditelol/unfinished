@@ -22,7 +22,7 @@ sync:
 	rsync -azP --delete "${OBSIDIAN_FOLDER}/Unfinished" ./content/
 
 ## Auto sync between OBSIDIAN_FOLDER and content folder
-watch-sync:
+watch-sync: sync
 	fswatch -o "${OBSIDIAN_FOLDER}/Files/Public" "${OBSIDIAN_FOLDER}/index.md" "${OBSIDIAN_FOLDER}/Unfinished"| while read f; do make sync; done
 
 .DEFAULT_GOAL := show-help
