@@ -5,6 +5,7 @@ tags:
 date: 2024-01-02
 created_date: 2024-01-02
 ---
+
 Originally I'm going to post something about New year and resolution for me this year. After writing the draft and ruminating it for a day, I decided against it since the current content feels too private for me and I decided to just do a proper blogpost later about this current year (well, to be fair I actually thinking of splitting it into quarterly so not really a new year resolution). 
 
 Anyway.. I want to lay out several things related to [[Unsupervised Learning]] that just made sense after a while working as Data (Science|Engineer), and watch several talks especially those of [[Vincent D. Warmerdam]]'s [Keynote on 2023 PyData Amsterdam](https://www.youtube.com/watch?v=C9p7suS-NGk&t=36s). As any of the other (un)finished notes I will not prioritize rigor here, but focus on the idea on my mind. So I'd like to start with a big one for me:

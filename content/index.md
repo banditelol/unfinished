@@ -17,6 +17,7 @@ Changes
 
 ## Notes
 - [[004 Skip a Number]]
+- [[003 Culture and System]]
 - [[002 Supervising Unsupervised Learning]]
 - [[001 101]]
 
