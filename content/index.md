@@ -16,6 +16,8 @@ Oh! and as I worked on this on my Obsidian using Quartz, expect some broken link
 Changes
 
 ## Notes
+- [[006 Proof Is All You Need]]
+- [[005 Useful Unviable Product]]
 - [[004 Skip a Number]]
 - [[003 Culture and System]]
 - [[002 Supervising Unsupervised Learning]]
