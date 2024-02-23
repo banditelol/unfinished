@@ -13,7 +13,7 @@ This experiment is a way for me to face 2024 with something different. I want to
 
 Oh! and as I worked on this on my Obsidian using Quartz, expect some broken link and unfinished thoughts 🙃
 
-Changes
+Updates 2024-01-18: I also hosted my [[TIL]] in this site, since writing and updating things are just a whole lot easier.
 
 ## Notes
 - [[006 Proof Is All You Need]]

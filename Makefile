@@ -15,6 +15,19 @@ serve:
 prepare-folder:
 	mkdir -p ./content/Files/Public ./content/Unfinished
 
+## Setup env
+prepare-env:
+	cp .env.example .env
+
+## Prepare node_modules
+prepare-node-modules:
+	npm i
+
+## Initialize the project, run this in the first time
+init: prepare-folder prepare-env prepare-node-modules
+	@echo "Please update .env file with your Obsidian folder path"
+	@echo "Also make sure you already have fswatch installed, if not please install it using brew"
+
 ## Sync Content from Obsidian Folder
 sync: 
 	rsync -azP --delete "${OBSIDIAN_FOLDER}/Files/Public" ./content/Files
@@ -23,6 +36,7 @@ sync:
 
 ## Auto sync between OBSIDIAN_FOLDER and content folder
 watch-sync: sync
+	@echo "Watching for changes in Obsidian Folder, now open new terminal and run make serve to start the dev server"
 	fswatch -o "${OBSIDIAN_FOLDER}/Files/Public" "${OBSIDIAN_FOLDER}/index.md" "${OBSIDIAN_FOLDER}/Unfinished"| while read f; do make sync; done
 
 .DEFAULT_GOAL := show-help
