@@ -1,5 +1,34 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import dotenv from 'dotenv'; 
+dotenv.config();  // Load environment variables from .env file 
+
+function getTransformer() {
+  const env: string | undefined = process.env.ENV;
+  const transformers = [
+    Plugin.FrontMatter(),
+    Plugin.CreatedModifiedDate({
+      priority: ["frontmatter", "filesystem"],
+    }),
+    Plugin.Latex({ renderEngine: "katex" }),
+    Plugin.SyntaxHighlighting({
+      theme: {
+        light: "github-light",
+        dark: "github-dark",
+      },
+      keepBackground: false,
+    }),
+    Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+    Plugin.GitHubFlavoredMarkdown(),
+    Plugin.TableOfContents(),
+    Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+    Plugin.Description(),
+  ];
+  if (env === "Debug") {
+    return transformers;
+  }
+  return transformers;
+}
 
 const config: QuartzConfig = {
   configuration: {
@@ -42,32 +71,10 @@ const config: QuartzConfig = {
         },
       },
     },
+    locale: "en-US"
   },
   plugins: {
-    transformers: [
-      Plugin.FrontMatter(),
-      Plugin.CreatedModifiedDate({
-        // you can add 'git' here for last modified from Git
-        // if you do rely on git for dates, ensure defaultDateType is 'modified'
-        priority: ["frontmatter", "filesystem"],
-      }),
-      Plugin.Latex({ renderEngine: "katex" }),
-      Plugin.SyntaxHighlighting({
-        // uses themes bundled with Shikiji, see https://shikiji.netlify.app/themes
-        theme: {
-          light: "github-light",
-          dark: "github-dark",
-        },
-        // set this to 'true' to use the background color of the Shikiji theme
-        // if set to 'false', will use Quartz theme colors for background
-        keepBackground: false,
-      }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
-      Plugin.GitHubFlavoredMarkdown(),
-      Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
-      Plugin.Description(),
-    ],
+    transformers: getTransformer(),
     filters: [Plugin.RemoveDrafts(), Plugin.ExplicitPublish()],
     emitters: [
       Plugin.AliasRedirects(),
