@@ -9,7 +9,7 @@ push:
 
 ## Serve Quartz
 serve:
-	npx quartz build --serve
+	npx quartz build --serve --port ${QUARTZ_PORT} --wsPort ${QUARTZ_WS_PORT}
 
 ## Prepare content foilder, do this before sync
 prepare-folder:
