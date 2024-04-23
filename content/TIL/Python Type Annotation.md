@@ -8,7 +8,7 @@ date: 2024-04-04
 created_date: 2024-04-04
 ---
 
-## Shandy - Python Type Annotation
+## Python Type Annotation
 
 ### Basic Concept
 Seperti namanya, dia cuman annotation aja dari PoV python interpreter mah. Tapi kalau kita ngomongin dari python ecosystem, ada beberapa package yang bisa kita pake untuk manfaatin type annotation ini biar bisa ngelakuin static check di codebase. Untuk typing di python sendiri bisa cek di PEP 484 (dan beberapa follow upnya di 526, 544, 586, 589, etc.)
@@ -18,7 +18,7 @@ Naaaah, terus gimana biar buat developer pada umumnya bisa memanfaatkan si type 
 Gimana cara makenya?
 ### pyright as CLI
 pun udah install python extension (atau pylance) di VS Code, biasanya ga langsung by default ngecek type annotation. Alternatif pertama (kalau ga semua orang make VSCode) bisa make CLI nya (`pip install pyright`). Misal:
-![[2024-04-04.png]]
+![[TIL/Files/2024-04-04.png]]
 
 Dari sini aja udah ketahuan kalau ada 3 pelanggaran type annotation dari code itu. Coba kita breakdown dulu:
 #### 1. `reportReturnType`
@@ -39,14 +39,14 @@ yang pertama di line 6, kita ngasih argumen dengan tipe `float` ke `params`, dan
 > Kenapa `Literal['kamu bohong']` kenapa dia nangkepnya ga `str`?
 
 #### Contoh Sudah Benar
-![[2024-04-04-1.png]]
+![[TIL/Files/2024-04-04-1.png]]
 
 ### Kok Pe'eR Banget CLI Terus
 Yup, emang PR kalau make CLI, walaupun bisa nge-`watch` tapi semua errornya muncul di terminal, dan gampang menuhin terminalnya :(. 
 ![[2024-04-04 at 5.27.59 - Black Mastodon.mp4]]
 
 Nah kalau di VSCode, Sublime, Emacs dan Vim, kita bisa make ini jadi LSP dan ngelakuin type checkin di editor. Caranya set `python.analysis.typeCheckingMode` jadi `basic` , `stansard` atau `strict` aja. Kalau baru mulai sih mending dari `standard` aja, apalagi kalau di codebase yang masih banyak blm ada typecheckingnya. Tapi kalau codebase baru dan sekalian mau belajar, yaaa~ boleh lah `strict`.
-![[2024-04-04-2.png]]
+![[TIL/Files/2024-04-04-2.png]]
 
 Jadinya waktu ada error di type annotation, langsung ditandain tuh sama VSCodenya. Jadi walau python gapaham soal type annotation ini, banyak tools yang bisa bantu untuk mastiin type annotation nya bener dan codenya comply ke annotation tsb. Oiya ini salah satu contoh bedanya `basic` dan `strict` yak
 ![[2024-04-04-3.png]]
@@ -81,3 +81,4 @@ def pop_one(a: list[T]) -> list[T]:
     return a
 
 ```
+
