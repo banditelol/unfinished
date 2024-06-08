@@ -36,7 +36,7 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible", host: "plausible.adityarp.com"
+      provider: "plausible", host: "https://plausible.adityarp.com"
     },
     baseUrl: "unfinished.adityarp.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
