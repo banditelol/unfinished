@@ -56,7 +56,7 @@ What does it even mean? My superficial understanding on how SSL Work is the foll
 
 So the above error means that local certificate bundle used by python doesn't trust `https://cekbpom.pom.go.id` issuer. What can we do to solve this? We need to decide whether we should trust the issuer or not, and what's the implication of trusting this issuer. And how should we do that? IDK ¯\\_(ツ)_/¯
 
->I really appreciate if someone with good knowledge on this topic could help me understand this better, please reach me out on my [twitter](twitter.com/banditelolrp)
+>I really appreciate if someone with good knowledge on this topic could help me understand this better, please reach me out on my [twitter](https://twitter.com/banditelolrp)
 
 ## Okay I'll Verify the Issuer Later, Now I Trust!
 While this raise a question in my mind, whether trusting an issuer without proper verification is better than setting `verify=False` in python. But it should at least better right? Assuming so, how do we go with trusting this issuer?
@@ -70,3 +70,6 @@ print(res.status_code)
 # 200
 ```
 Voila!
+
+## Additional Readings
+- [Found this more comprehensive and informative answer from SO](https://stackoverflow.com/questions/39356413/how-to-add-a-custom-ca-root-certificate-to-the-ca-store-used-by-pip-in-windows)
