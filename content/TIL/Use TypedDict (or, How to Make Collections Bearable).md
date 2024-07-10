@@ -97,6 +97,19 @@ res = sum_two_columns_df(df) # OK
 res = sum_two_columns_series(df["a"], df["b"]) # Better, since in this scope we know df contains columns "a" and "b"
 ```
 
+### Use `Final` to Hold that Constant
+
+Already follow PEP8 and use `CAPITAL_CASE` for that constant? Or you have a variable you don't want to override? Help your editor to remind you by adding `Final` type to it
+```python
+from typing import Final
+
+SOME_GLOBAL_CONSTANT : Final[int] = 42
+
+def do_sonething(a_number:int) -> int:
+    final_number :Final[int] = a_number + SOME_GLOBAL_CONSTANT
+    ...
+    return final_number
+```
 ## Want More?
 
 Wow, I can't believe you reach this spot in my TIL. If you want to discuss more things about python, data or Machine Learning, hit me up on [Twitter](https://twitter.com/@banditelolRP) (or X actually, I still haven't wrapped my head around it) and either DM me your question or discuss this TIL on the thread!
