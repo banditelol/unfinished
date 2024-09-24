@@ -17,13 +17,13 @@ prepare-folder:
 
 ## Sync Content from Obsidian Folder
 sync: 
-	rsync -azP --delete "${OBSIDIAN_FOLDER}/Files/Public" ./content/Files
 	rsync -azP --delete "${OBSIDIAN_FOLDER}/index.md" ./content/
 	rsync -azP --delete "${OBSIDIAN_FOLDER}/Unfinished" ./content/
+	rsync -azP --delete "${OBSIDIAN_FOLDER}/TIL" ./content/
 
 ## Auto sync between OBSIDIAN_FOLDER and content folder
 watch-sync: sync
-	fswatch -o "${OBSIDIAN_FOLDER}/Files/Public" "${OBSIDIAN_FOLDER}/index.md" "${OBSIDIAN_FOLDER}/Unfinished"| while read f; do make sync; done
+	fswatch -o "${OBSIDIAN_FOLDER}/index.md" "${OBSIDIAN_FOLDER}/Unfinished" "${OBSIDIAN_FOLDER}/TIL"| while read f; do make sync; done
 
 .DEFAULT_GOAL := show-help
 # See <https://gist.github.com/klmr/575726c7e05d8780505a> for explanation.

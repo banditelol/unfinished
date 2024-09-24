@@ -13,9 +13,13 @@ This experiment is a way for me to face 2024 with something different. I want to
 
 Oh! and as I worked on this on my Obsidian using Quartz, expect some broken link and unfinished thoughts 🙃
 
-Changes
+Updates 2024-01-18: I also hosted my [[TIL]] in this site, since writing and updating things are just a whole lot easier.
 
 ## Notes
+- [[011 am I Afraid of Who I am not?]]
+- [[010 Should I Trust Or Verify?]]
+- [[009 The Least I Should Do is Expect]]
+- [[008 Unapologetically Unperfect]]
 - [[006 Proof Is All You Need]]
 - [[005 Useful Unviable Product]]
 - [[004 Skip a Number]]
