@@ -4,6 +4,7 @@ tags:
   - til
   - Python
   - Convention
+  - OOP
 date: 2024-09-25
 created_date: 2024-09-25
 ---
