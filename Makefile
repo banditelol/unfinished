@@ -4,6 +4,10 @@ include .env
 export
 
 ## Push changes to Github and Sync Quartz Framework
+update:
+	npx quartz update
+
+## Push changes to Github and Sync Quartz Framework
 push:
 	npx quartz sync
 

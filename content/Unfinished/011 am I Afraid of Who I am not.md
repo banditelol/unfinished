@@ -27,7 +27,7 @@ And it applies not only in real physical world, but also in the virtual world. I
 ## Case of Stage Fright? Or Disappointment for My Favorite Actor
 
 This problem shown up recently when I did a AMA for [Data Wizard](https://www.instagram.com/data.wizards/) and I need to answer question by recording my answer and post it as stories. Even before I started the AMA, when I post the intro video I couldn't stand being watched by "people" that I don't know who and the intro turned out to be too stiff that my sister call it out as "stiff as dry [^1]kanebo".
-![[011 am I Afraid of Who I am not?-1.png]]
+![[011 am I Afraid of Who I am not-1.png]]
 
 I often blame my stage fright as a blanket scapegoat for this kind of feeling. But I realized a bit more after my wife asks me to just talk like I'm in front of a specific friend, and somehow it felt a lot better! Well, I shouldn't be that surprised since it's an advise that spun out of comes out as "know your audience". But feeling it myself is another story.
 
