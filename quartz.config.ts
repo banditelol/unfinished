@@ -30,6 +30,11 @@ function getTransformer() {
   return transformers;
 }
 
+/**
+ * Quartz 4 Configuration
+ *
+ * See https://quartz.jzhao.xyz/configuration for more information.
+ */
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "(un)Finished",
@@ -40,8 +45,9 @@ const config: QuartzConfig = {
     },
     baseUrl: "unfinished.adityarp.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: "modified",
     theme: {
+      fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
         header: "Schibsted Grotesk",
@@ -58,6 +64,7 @@ const config: QuartzConfig = {
           secondary: "#284b63",
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#fff23688",
         },
         darkMode: {
           light: "#161618",
@@ -68,6 +75,7 @@ const config: QuartzConfig = {
           secondary: "#7b97aa",
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
         },
       },
     },
@@ -78,7 +86,7 @@ const config: QuartzConfig = {
     filters: [Plugin.RemoveDrafts(), Plugin.ExplicitPublish()],
     emitters: [
       Plugin.AliasRedirects(),
-      Plugin.ComponentResources({ fontOrigin: "googleFonts" }),
+      Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage(),
       Plugin.TagPage(),
@@ -88,7 +96,10 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
+      Plugin.Favicon(),
       Plugin.NotFoundPage(),
+      // Comment out CustomOgImages to speed up build time
+      Plugin.CustomOgImages(),
     ],
   },
 }
